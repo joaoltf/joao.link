@@ -6,42 +6,54 @@
         <link rel="stylesheet" href="style.css">
         <script async type="text/javascript" src="script.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <title>New Tab</title>
+        <title>Início</title>
     </head>
+	
     <body>
         <div class="search_block">
                 <form id="search_eng_form" method="get" action="https://www.google.com/search?q=">
                     <button type="button" class="se_btn" id="se_button"><img id="se_icon"src="icons/goog.svg" class="filter-white"></button><input type="search" id="search" placeholder="Searching with Google" autocomplete="off" name="q" autofocus><button type="submit" class="go" id="go_btn">GO</button>
                 </form>
         </div>
-        <div class="card_list">
-            <div class="card" id="watch">
-                <p class="card_title" id="w">Admin</p>
-				<a href="https://ferreiras.synology.me:5218/">DS 218+</a>
-				<a href="http://192.168.1.100:8010/admin/">PiHole</a>
-				<a href="http://192.168.1.218:9000">Portainer</a>
-				<a href="http://192.168.1.218:32771/">Speed Tests</a>
-            </div>
-            <div class="card" id="social">
-                <p class="card_title" id="s">Downloads</p>
-				<a href="http://192.168.1.218:32782/UI/Dashboard">Jackett</a>
-				<a href="http://192.168.1.218:32793/">Hydra2</a>
-				<a href="http://192.168.1.218:32792/">NZBGet</a>
+	<div class="row">
+		<div class="column">
+		<div class="card" id="watch">
+			<div class="card_title" id="w">Admin</p>
+				<a href="https://192.168.1.218:5218/">DS 218+</p>
+				<a href="http://192.168.1.100:8010/admin/">PiHole</p>
+				<a href="http://192.168.1.218:9000">Portainer</p>
+				<a href="http://192.168.1.100.81/">Nginx</a>
+			</div>
+		</div>
+	</div>
+		<div class="column">
+   		<div class="card" id="social">
+            <div class="card_title" id="s">Downloads</p>
+				<a href="http://192.168.1.218:32782/UI/Dashboard">Jackett</p>
+				<a href="http://192.168.1.218:32793/">Hydra2</p>
+				<a href="http://192.168.1.218:32792/">NZBGet</p>
 				<a href="http://192.168.1.218:8080/">qBittorrent</a>
             </div>
-            <div class="card" id="dev">
-                <p class="card_title" id="d">Media</p>
-				<a href="http://192.168.1.218:32783/">Radarr</a>
-				<a href="http://192.168.1.218:32784/">Sonarr</a>
-				<a href="http://192.168.1.218:32768/series">Bazarr</a>
+         </div>
+    </div>
+		<div class="column">
+        <div class="card" id="dev">
+            <div class="card_title" id="d">Media</p>
+				<a href="http://192.168.1.218:32783/">Radarr</p>
+				<a href="http://192.168.1.218:32784/">Sonarr</p>
+				<a href="http://192.168.1.218:36547/series">Bazarr</p>
 				<a href="http://192.168.1.218:32773">Jellyfin</a>
             </div>
-            <div class="card" id="linux">
-                <p class="card_title" id="l">Hospital</p>
+        </div>
+    </div>
+		<div class="column">
+        <div class="card" id="linux">
+            <div class="card_title" id="l">Hospital</p>
 				<a href="https://webrhv.min-saude.pt/">WebRHV</a>
             </div>
-        </div>
-            <p id="time"></p>  
-        <h2>III</h2>  
-    </body>
+		</div>
+		</div>
+	</div>
+	</body>
+	
 </html>

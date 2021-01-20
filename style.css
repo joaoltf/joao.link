@@ -1,41 +1,68 @@
 body {
     background-color: #2e3440;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
+	overflow: auto
     -moz-user-select: none;
-    padding: 0;
-    margin: 0;
+}
+
+/* Float four columns side by side */
+/* Mudar esta percentagem para a centragem */
+.column {
+  float: left;
+  position: relative;
+  left: 16%;
+  padding: 10 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
 }
 
 /*-------------------------------------------------------*/
 /* This part of the code takes care of styling the cards */
 /*-------------------------------------------------------*/
 
-.card_list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .card_title {
-    font-size: 45px
+    font-size: 35px
 }
 .card {
     display: flex;
+	flex-wrap: wrap;
     position: relative;
     flex-direction: column;
-    min-height: 450px;
-    width: 300px;
-    min-width: 200px;
-    padding: 1.5rem;
+    min-height: 300px;
+    width: 200px;
+    min-width: 150px;
+    padding: 1rem;
     border-radius: 10px;
     background-color: #3b4252;
     box-shadow: -1rem 0 3rem #1b1f26;
     transition: .2s;
 }
-.card:hover {
+.card:hover, .card:active {
     transform: translateY(-1rem)
 }
-.card:hover~.card {
+.card:hover~.card, .card:active~.card {
     transform: translateX(130px)
 }
 .card:not(:first-child) {
@@ -47,7 +74,7 @@ a:visited, a:link, a:active {
     width: auto;
     text-decoration: none;
     font-size: 32px;
-    line-height: 2;
+    line-height: 0;
 }
 a:hover {
     text-shadow: 2px 2px 4px #1b1f26;
@@ -94,6 +121,8 @@ a:hover {
 
 .search_block {
   display: flex;
+  flex-wrap: wrap;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
@@ -103,7 +132,7 @@ a:hover {
 input {
     color: #eceff4;
     background-color: #3b4252;
-    width: 700px;
+    width: 300px;
     text-align: center;
     height: 50px;
     font-size: 20px;
