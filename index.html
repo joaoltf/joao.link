@@ -1,60 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <script async type="text/javascript" src="script.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <title>Início</title>
-    </head>
-	
-    <body>
-        <div class="search_block">
-                <form id="search_eng_form" method="get" action="https://www.google.com/search?q=">
-                    <button type="button" class="se_btn" id="se_button"><img id="se_icon"src="icons/goog.svg" class="filter-white"></button><input type="search" id="search" placeholder="Searching with Google" autocomplete="off" name="q" autofocus><button type="submit" class="go" id="go_btn">GO</button>
-                </form>
-        </div>
-	<div class="row">
-		<div class="column">
-		<div class="card" id="watch">
-			<div class="card_title" id="w">Admin</p>
-				<a href="https://192.168.1.218:5218/">DS 218+</p>
-				<a href="http://192.168.1.100:8010/admin/">PiHole</p>
-				<a href="http://192.168.1.218:9000">Portainer</p>
-				<a href="http://192.168.1.218:8765">SpeedTest</a>
-			</div>
-		</div>
-	</div>
-		<div class="column">
-   		<div class="card" id="social">
-            <div class="card_title" id="s">Downloads</p>
-				<a href="http://192.168.1.218:32782/UI/Dashboard">Jackett</p>
-				<a href="http://192.168.1.218:32793/">Hydra2</p>
-				<a href="http://192.168.1.218:32792/">NZBGet</p>
-				<a href="http://192.168.1.218:8080/">qBittorrent</a>
-            </div>
-         </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- GetStarted - A simple responsive Startpage
+        Author: MrAlpha786  (github.con/MrAlpha786) -->
+
+    <title>INÍCIO</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Olá, <span id="username" onclick="toggleMode()"></span></h1>
+
+      <div id="search">
+      <input id="search-field" type="text"/>
+      <button id="clear-field" onclick="clearField()"><img src="asset/icons/close.svg" alt="clear"></button>
+      <button id="search-button" onclick="search()"><img src="asset/icons/loupe.svg" alt="Go"></button>
+      </div>
+
+      <div class="table-container">
+        <div class="col-container" id="tab-container">
+      	  <div class="tab active" data-tab="tab-1">General</div>
+      	  <div class="tab" data-tab="tab-2">Tech</div>
+      	  <div class="tab" data-tab="tab-3">Fun</div>
+      	  <div class="tab" data-tab="tab-4">Social</div>
+      	</div>
+
+      	<div class="col-container" id="content-container">
+      	  <div class="content active" data-tab="tab-1"></div>
+      	  <div class="content" data-tab="tab-2"></div>
+      	  <div class="content" data-tab="tab-3"></div>
+      	  <div class="content" data-tab="tab-4"></div>
+      	</div>
+      </div>
+
     </div>
-		<div class="column">
-        <div class="card" id="dev">
-            <div class="card_title" id="d">Media</p>
-				<a href="http://192.168.1.218:32783/">Radarr</p>
-				<a href="http://192.168.1.218:32784/">Sonarr</p>
-				<a href="http://192.168.1.218:36547/series">Bazarr</p>
-				<a href="http://192.168.1.218:32773">Jellyfin</a>
-            </div>
-        </div>
-    </div>
-		<div class="column">
-        <div class="card" id="linux">
-            <div class="card_title" id="l">Vários</p>
-				<a href="https://webrhv.min-saude.pt/">WebRHV</p>
-				<a href="https://www.photopea.com/">Photopea</a>
-            </div>
-		</div>
-		</div>
-	</div>
-	</body>
-	
+
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+
+  </body>
 </html>
