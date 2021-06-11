@@ -20,8 +20,8 @@ var cards = [
 	{
 		name: "Media",
 		bookmarks: {
-			"Radarr": "http://192.168.1.218:32783/",
-			"Sonarr": "http://192.168.1.218:32784/",
+			"Radarr": "http://192.168.1.218:7878/",
+			"Sonarr": "http://192.168.1.218:8989/",
 			"Bazarr": "http://192.168.1.218:36547/series",
 			"Jellyfin": "http://192.168.1.218:32773/",
 			"Bibliogram": "http://192.168.1.218:10404/",
